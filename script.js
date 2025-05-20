@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const modalLinkManifold = document.getElementById("modalLinkManifold");
         const modalLinkEthscan = document.getElementById("modalLinkEthscan");
         const modalLinkContract = document.getElementById("modalLinkContract");
-        const imagePath = `img/${index + 1}.jpg`;
+        const imagePath = `./img/${index + 1}.jpg`;
         const interactiveContainer = document.getElementById("interactiveContainer");
         rect.addEventListener('mouseenter', () => {
           rect.style.stroke = 'red';
