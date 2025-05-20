@@ -47,8 +47,6 @@ body {
 
 .panzoomContainer {
     touch-action: none;
-    overflow: visible;
-
 }
 
 #svgContainer svg,
