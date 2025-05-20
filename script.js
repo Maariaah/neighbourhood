@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const modalLinkEthscan = document.getElementById("modalLinkEthscan");
         const modalLinkContract = document.getElementById("modalLinkContract");
         const imagePath = `./img/${index + 1}.jpg`;
-        console.log('Setting image src:', imagePath);
         const interactiveContainer = document.getElementById("interactiveContainer");
         rect.addEventListener('mouseenter', () => {
           rect.style.stroke = 'red';
