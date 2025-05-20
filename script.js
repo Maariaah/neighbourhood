@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
           modalImage.src = imagePath;
           modalImage.loading = "lazy";
           modalImage.onerror = () => {
-            modalImage.src = "img/placeholder.jpg";
+            modalImage.src = "./img/placeholder.jpg";
           };
           modalLinkManifold.href = linksManifold[index] || "#";
           modalLinkEthscan.href = linksEtherscan[index] || "#";
