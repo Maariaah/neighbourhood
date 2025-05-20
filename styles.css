@@ -47,10 +47,12 @@ body {
 
 .panzoomContainer {
     touch-action: none;
+    overflow: visible;
+
 }
 
 #svgContainer svg,
-#panzoomContainer,
+.panzoomContainer,
 #backgroundImg {
     position: absolute;
     top: 0;
