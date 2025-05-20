@@ -1,0 +1,206 @@
+body {
+    background-color: black;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    max-width: 860px;
+}
+
+#projectDescription {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+#projectSummary {
+    width: 60%;
+}
+
+#projectNoticeMobile {
+    display: none;
+    padding: 0 24px;
+}
+
+#projectInfo {
+    width: 40%;
+    text-align: right;
+}
+
+#interactiveContainer {
+    position: relative;
+    width: 100vw;
+    height: 140vh;
+    margin: 0 auto;
+}
+
+.panzoomContainer {
+    touch-action: none;
+}
+
+#svgContainer svg,
+#panzoomContainer,
+#backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+}
+
+#svgContainer rect {
+    fill: transparent;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#modalWrapper {
+    height: 100%;
+    max-height: 100vH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myModal {
+    position: relative;
+    width: 90%;
+    max-width: 540px;
+    z-index: 10;
+    background-color: transparent;
+    height: fit-content;
+}
+
+.modalContent {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+#modalImage {
+    max-width: 450px;
+    max-height: 450px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+#modalLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+#modalLinkManifold button {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: aquamarine;
+    border: none;
+    text-transform: uppercase;
+}
+
+#modalLinkEthscan {
+    display: block;
+    margin: 16px 0;
+    cursor: pointer;
+}
+
+#header {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav a {
+    color: aliceblue;
+    padding: 16px;
+}
+
+
+#footer {
+    height: 42px;
+    width: 100%;
+    padding: 24px;
+}
+
+/* Mobile (portrait) */
+@media (max-width: 480px) {
+    .modalContent {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #projectDescription {
+        flex-direction: column;
+    }
+
+    #projectSummary {
+        width: 100%;
+    }
+
+    #projectInfo {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Tablets and small screens */
+@media (max-width: 768px) {
+    .modalContent {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    #modalImage {
+        max-height: 60vh;
+    }
+
+    #projectNoticeMobile {
+        display: block;
+    }
+}
+
+/* Larger tablets (landscape) */
+@media (max-width: 1024px) {
+    .modalContent {
+        max-width: 90%;
+    }
+
+    #interactiveContainer {
+        width: 100vW;
+    }
+}

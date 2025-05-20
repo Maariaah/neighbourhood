@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="header">
+        <div id="Logo"> <a href="#"></a>
+            <h2>Indecent neighbourhood</h2>
+        </div>
+        <div id="nav">
+            <a a href="#">About</a>
+            <a a href="#">FAQ</a>
+        </div>
+    </div>
+    <div id="container">
+        <!-- Intoduction -->
+        <div id="projectDescription">
+            <div id="projectSummary">
+                <h3>Project by Mariah (Vestica)</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur.</p>
+            </div>
+            <div id="projectInfo">
+                <h4>Available: 25/50 (50%)</h4>
+            </div>
+        </div>
+        <!-- Shows only for tablet and mobile -->
+        <div id="projectNoticeMobile">
+            <p>Scroll vertivally to explore the whole piece -----> </p>
+        </div>
+        <!-- Interactive image -->
+        <div id="interactiveContainer">
+            <div class="panzoomContainer">
+                <img id="backgroundImg" src="./painting.jpg" alt="" />
+            </div>
+            <div id="svgContainer">
+                <object id="my-svg" type="image/svg+xml" data="/cover.svg"></object>
+            </div>
+
+            <!-- Modal -->
+            <div id="modalWrapper">
+                <div id="myModal" class="modal">
+                    <div class="modalContent">
+                        <span id="closeModal" class="close">&times;</span>
+                        <img id="modalImage" src="" alt="Scene image" />
+                        <h3 id="modalTitle"></h3>
+                        <p id="modalDescription"></p>
+                        <div id="modalLinks">
+                            <a id="modalLinkManifold" href="#" target="_blank">
+                                <button>Mint on Manifold.xyz</button>
+                            </a>
+                            <a id="modalLinkEthscan" href="#" target="_blank">
+                                See on Etherscan <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a id="modalLinkContract" href="#" target="_blank">
+                                Contract: Indecent neighbourhood <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer">
+        <p>© Mariah 2025</p>
+    </div>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
+    <script src="/data.js" defer></script>
+    <script src="/script interactive.js" defer></script>
+</body>
+
+</html>
