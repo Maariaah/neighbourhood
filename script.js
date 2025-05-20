@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Enable zoom with mouse wheel
   img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
-  fetch('/cover.svg')
+  fetch('./cover.svg')
     .then(response => response.text())
     .then(svgText => {
       const container = document.getElementById('svgContainer');
