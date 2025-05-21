@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM fully loaded and parsed!');
 
 
-  const img = document.getElementById('backgroundImg');
+  const img = document.getElementById('imagesContainer');
   const panzoom = Panzoom(img, {
-    maxScale: 1
+    maxScale: 2,
+    minScale: 1,
+    contain: "outside",
   })
-  panzoom.pan(5, 5)
-  panzoom.zoom(1, { animate: true })
 
   // Enable zoom with mouse wheel
   img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);

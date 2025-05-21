@@ -48,12 +48,13 @@
         <!-- Interactive image -->
         <div id="interactiveContainer">
             <div class="panzoomContainer">
-                <img id="backgroundImg" src="./img/painting.jpg" alt="" />
+                <div id="imagesContainer">
+                    <img id="backgroundImg" src="./img/painting.jpg" alt="" />
+                    <div id="svgContainer">
+                        <object id="my-svg" type="image/svg+xml" data="./cover.svg"></object>
+                    </div>
+                </div>
             </div>
-            <div id="svgContainer">
-                <object id="my-svg" type="image/svg+xml" data="./cover.svg"></object>
-            </div>
-
             <!-- Modal -->
             <div id="modalWrapper">
                 <div id="myModal" class="modal">
