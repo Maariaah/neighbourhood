@@ -8,6 +8,7 @@ body {
 }
 
 .section {
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -40,7 +41,6 @@ body {
     height: 120vh;
     position: relative;
     /* touch-action: none; */
-    border: 1px solid white;
     width: auto;
 }
 
@@ -213,6 +213,7 @@ body {
 
     #panZoomWrapper {
         height: 40vh;
+        border: 1px solid white;
     }
 }
 
