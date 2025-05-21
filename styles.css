@@ -208,6 +208,11 @@ height: 100%;
     #projectNoticeMobile {
         display: block;
     }
+
+    .panzoomContainer,
+    #interactiveContainer{
+        height: 50vh;
+    }
 }
 
 /* Larger tablets (landscape) */
@@ -217,6 +222,11 @@ height: 100%;
     }
 
     #interactiveContainer {
-        width: 100vW;
+        width: 100vw;
+    }
+
+    .panzoomContainer,
+    #interactiveContainer{
+        height: 70vh;
     }
 }

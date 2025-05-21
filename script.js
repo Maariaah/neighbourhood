@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   // Enable zoom with mouse wheel
-  //  img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+   img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
   fetch('cover.svg')
     .then(response => response.text())
