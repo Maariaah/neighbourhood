@@ -168,6 +168,10 @@ body {
 /* Mobile (portrait) */
 @media (max-width: 480px) {
 
+    #myModal {
+        width: 100%;
+    }
+
     .section {
         padding: 16px;
     }
