@@ -167,6 +167,15 @@ body {
 
 /* Mobile (portrait) */
 @media (max-width: 480px) {
+
+    .section {
+        padding: 16px;
+    }
+
+    #interactiveContainer {
+        padding: 0;
+    }
+
     #projectDescription {
         flex-direction: column;
     }

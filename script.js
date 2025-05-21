@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (mediaQuery.matches) {
     const img = document.getElementById('panZoomContent');
     const panzoom = Panzoom(img, {
-      contain: false,
+      // contain: false,
       maxScale: 3,
       minScale: 1,
     })
@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // // Prevent panning beyond the edge
-    const limitPanX = (x) => {
-      const maxPan = 500;
-      return Math.max(Math.min(x, maxPan), 0);
-    };
+    // const limitPanX = (x) => {
+    //   const maxPan = 500;
+    //   return Math.max(Math.min(x, maxPan), 0);
+    // };
 
-    img.addEventListener('panzoompan', (event) => {
-      const pan = panzoom.getPan();
-      panzoom.pan(limitPanX(pan.x), 0);
-    });
+    // img.addEventListener('panzoompan', (event) => {
+    //   const pan = panzoom.getPan();
+    //   panzoom.pan(limitPanX(pan.x), 0);
+    // });
   };
 
   // Fetch SVG
