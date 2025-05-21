@@ -48,8 +48,6 @@ body {
 .panzoomContainer {
     touch-action: none;
     border: 1px solid white;
-    overflow-y: auto; 
-    overflow-x: hidden;
     height: 100vh;
 }
 
@@ -66,9 +64,12 @@ height: 100%;
     right: 0;
     margin: 0 auto;
     width: auto;
-    height: 100%;
 }
 
+#svgContainer svg,
+#backgroundImg {
+    height: 100%;
+}
 
 #svgContainer rect {
     fill: transparent;

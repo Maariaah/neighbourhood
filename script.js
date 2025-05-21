@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const panzoom = Panzoom(img, {
     maxScale: 2,
     minScale: 1,
-    contain: "outside",
+    // contain: "outside",
   })
 
   // Enable zoom with mouse wheel
-  img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+  //  img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
   fetch('cover.svg')
     .then(response => response.text())
