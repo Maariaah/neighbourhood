@@ -7,16 +7,10 @@ body {
 }
 
 .section {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 24px;
-
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-    max-width: 860px;
 }
 
 #projectDescription {
@@ -38,54 +32,52 @@ body {
     text-align: right;
 }
 
-#interactiveContainer {
+#panZoomWrapper {
+    /*disable vertical scroll */
+    /* overflow: hidden; */
+    width: 100%;
+    height: 120vh;
     position: relative;
-    width: 100vw;
-    height: 140vh;
-    margin: 0 auto;
-}
-
-.panzoomContainer {
-    touch-action: none;
+    /* touch-action: none; */
     border: 1px solid white;
-    height: 100vh;
+    width: auto;
 }
 
-#imagesContainer {
-height: 100%;
+#panZoomContent {
+    width: inherit;
+    height: inherit;
 }
 
+/* These 2 have to match the propperties in order to overlap */
 #svgContainer svg,
-.panzoomContainer,
 #backgroundImg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: auto;
-}
-
-#svgContainer svg,
-#backgroundImg {
     height: 100%;
+    width: auto;
 }
 
 #svgContainer rect {
     fill: transparent;
 }
 
+.show-modal {
+    display: block !important;
+}
+
 .modal {
     display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     color: black;
-
 }
 
 .close {
@@ -95,21 +87,12 @@ height: 100%;
     font-weight: bold;
 }
 
-#modalWrapper {
-    height: 100%;
-    max-height: 100vH;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #myModal {
-    position: relative;
-    width: 90%;
-    max-width: 540px;
-    z-index: 10;
-    background-color: transparent;
+    width: auto;
     height: fit-content;
+    max-width: 540px;
+    max-height: 90%;
+    background-color: transparent;
 }
 
 .modalContent {
@@ -121,8 +104,8 @@ height: 100%;
 }
 
 #modalImage {
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 350px;
+    max-height: 350px;
     width: 100%;
     height: auto;
     display: block;
@@ -175,11 +158,6 @@ height: 100%;
 
 /* Mobile (portrait) */
 @media (max-width: 480px) {
-    .modalContent {
-        padding: 12px;
-        font-size: 14px;
-    }
-
     #projectDescription {
         flex-direction: column;
     }
@@ -196,9 +174,11 @@ height: 100%;
 
 /* Tablets and small screens */
 @media (max-width: 768px) {
-    .modalContent {
-        padding: 16px;
-        font-size: 15px;
+
+    #svgContainer svg,
+    #backgroundImg {
+        height: 100%;
+        width: auto;
     }
 
     #modalImage {
@@ -209,24 +189,15 @@ height: 100%;
         display: block;
     }
 
-    .panzoomContainer,
-    #interactiveContainer{
-        height: 50vh;
+    #panZoomWrapper {
+        height: 40vh;
     }
 }
 
 /* Larger tablets (landscape) */
 @media (max-width: 1024px) {
-    .modalContent {
-        max-width: 90%;
-    }
 
-    #interactiveContainer {
-        width: 100vw;
-    }
-
-    .panzoomContainer,
-    #interactiveContainer{
-        height: 70vh;
+    #panZoomWrapper {
+        height: 80vh;
     }
 }

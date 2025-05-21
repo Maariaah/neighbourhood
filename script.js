@@ -3,17 +3,39 @@
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM fully loaded and parsed!');
 
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
 
-  const img = document.getElementById('imagesContainer');
-  const panzoom = Panzoom(img, {
-    maxScale: 2,
-    minScale: 1,
-    // contain: "outside",
-  })
+  //Panzoom container
+  if (mediaQuery.matches) {
+    const img = document.getElementById('panZoomContent');
+    const panzoom = Panzoom(img, {
+      contain: false,
+      maxScale: 3,
+      minScale: 1,
+    })
 
-  // Enable zoom with mouse wheel
-   img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+    // Enable zoom with mouse wheel
+    img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
+    // Lock vertical panning
+    img.addEventListener('panzoompan', (event) => {
+      const pan = panzoom.getPan();
+      panzoom.pan(pan.x, 0); // lock Y to 0, allow X to move
+    });
+
+    // // Prevent panning beyond the edge
+    const limitPanX = (x) => {
+      const maxPan = 500;
+      return Math.max(Math.min(x, maxPan), 0);
+    };
+
+    img.addEventListener('panzoompan', (event) => {
+      const pan = panzoom.getPan();
+      panzoom.pan(limitPanX(pan.x), 0);
+    });
+  };
+
+  // Fetch SVG
   fetch('cover.svg')
     .then(response => response.text())
     .then(svgText => {
@@ -56,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
           modalLinkManifold.href = linksManifold[index] || "#";
           modalLinkEthscan.href = linksEtherscan[index] || "#";
           modalLinkContract.href = linksContract || "#";
-          modal.style.display = "block";
+          modal.classList.add('show-modal');
           interactiveContainer.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
@@ -64,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         closeModal.addEventListener('click', () => {
-          modal.style.display = "none";
+          modal.classList.remove('show-modal');
         });
 
         window.addEventListener('click', (event) => {
           if (event.target == modal) {
-            modal.style.display = "none";
+            modal.classList.remove('show-modal');
           }
         });
       })

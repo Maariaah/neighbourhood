@@ -39,42 +39,37 @@
             </div>
         </div>
     </div>
-    <div id="container">
-
+    <div class="section" id="interactiveContainer">
         <!-- Shows only for tablet and mobile -->
         <div id="projectNoticeMobile">
             <p>Scroll vertivally to explore the whole piece -----> </p>
         </div>
         <!-- Interactive image -->
-        <div id="interactiveContainer">
-            <div class="panzoomContainer">
-                <div id="imagesContainer">
-                    <img id="backgroundImg" src="./img/painting.webp" alt="" />
-                    <div id="svgContainer">
-                        <object id="my-svg" type="image/svg+xml" data="./cover.svg"></object>
-                    </div>
+        <div id="panZoomWrapper">
+            <div id="panZoomContent">
+                <img id="backgroundImg" src="./img/painting.webp" alt="" />
+                <div id="svgContainer">
+                    <object id="my-svg" type="image/svg+xml" data="./cover.svg"></object>
                 </div>
             </div>
-            <!-- Modal -->
-            <div id="modalWrapper">
-                <div id="myModal" class="modal">
-                    <div class="modalContent">
-                        <span id="closeModal" class="close">&times;</span>
-                        <img id="modalImage" src="" alt="Scene image" />
-                        <h3 id="modalTitle"></h3>
-                        <p id="modalDescription"></p>
-                        <div id="modalLinks">
-                            <a id="modalLinkManifold" href="#" target="_blank">
-                                <button>Mint on Manifold.xyz</button>
-                            </a>
-                            <a id="modalLinkEthscan" href="#" target="_blank">
-                                See on Etherscan <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                            <a id="modalLinkContract" href="#" target="_blank">
-                                Contract: Indecent neighbourhood <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
+        </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modalContent">
+                <span id="closeModal" class="close">&times;</span>
+                <img id="modalImage" src="" alt="Scene image" />
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div id="modalLinks">
+                    <a id="modalLinkManifold" href="#" target="_blank">
+                        <button>Mint on Manifold.xyz</button>
+                    </a>
+                    <a id="modalLinkEthscan" href="#" target="_blank">
+                        See on Etherscan <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a id="modalLinkContract" href="#" target="_blank">
+                        Contract: Indecent neighbourhood <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
